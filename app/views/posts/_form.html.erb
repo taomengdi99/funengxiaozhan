@@ -3,5 +3,8 @@
     <%= f.input :content,input_html:{class:"from-control"} %>
   </div>
     <%= select_tag(:category_id, options_for_select(@categories), :prompt => "categories") %>
+    <span style="color:grey"> 请选个类别！不选保存不成功啊！</span>
+    <br>
+    <br>
     <%= f.submit "Submit",class:"btn btn-primary", data:{disable_with:"Submitting..."} %>
 <% end %>
