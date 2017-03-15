@@ -1,0 +1,7 @@
+<%= simple_form_for @post do |f| %>
+  <div class="form-post">
+    <%= f.input :content,input_html:{class:"from-control"} %>
+  </div>
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "categories") %>
+    <%= f.submit "Submit",class:"btn btn-primary", data:{disable_with:"Submitting..."} %>
+<% end %>
