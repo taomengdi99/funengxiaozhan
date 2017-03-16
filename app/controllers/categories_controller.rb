@@ -7,7 +7,11 @@ class CategoriesController < ApplicationController
   end
   def create
     @category = Category.new(category_params)
-    @category.save
+    if @category.save
+       redirect_to new_post_path
+    else
+      render :new
+    end
   end
   private
   def category_params
